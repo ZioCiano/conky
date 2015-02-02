@@ -1,0 +1,100 @@
+#ZioCiano-conky
+#Author: Luciano Ognissanti
+#Version: 1.0
+#Based on: conky_seamod & conky IZ2RPN
+#===========#
+background yes
+update_interval 1
+
+cpu_avg_samples 1
+net_avg_samples 2
+temperature_unit celsius
+
+double_buffer yes
+no_buffers yes
+text_buffer_size 2048
+override_utf8_locale yes
+use_xft yes
+xftfont caviar dreams:size=10
+xftalpha 0.5
+uppercase no
+
+gap_x 10
+gap_y 70
+minimum_size 0 0
+maximum_width 300
+
+own_window yes
+own_window_type normal
+own_window_transparent yes
+own_window_argb_visual yes
+own_window_argb_visual yes
+own_window_colour 000000
+own_window_argb_value 0
+own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
+
+border_inner_margin 0
+border_outer_margin 0
+alignment bottom_right
+
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+# Defining colors
+default_color FFFFFF
+color1 FFFFFF
+color2 0F52BA
+color3 B2B2B2
+color4 5E86C1
+color5 4169E1
+##
+TEXT
+${color4}${hr 2}
+${font Cantarell Bold:size=10,weight:bold}${color5}SISTEM
+${font Cantarell Bold:size=10,weight:normal}${color1}$sysname $kernel
+${font Cantarell Bold:size=10,weight:normal}${color1}$nodename
+${font Cantarell Bold:size=10,weight:normal}${color1}$hostname
+# CPU
+${offset 35}${color2}${cpugraph}${voffset -25}
+${font Cantarell Bold:size=10,weight:bold}${color5}CPU
+${color2}${cpubar}
+${font Cantarell Bold:size=10,weight:normal}${color1}${top name 1}${alignr}${top cpu 1}%
+${font Cantarell Bold:size=10,weight:normal}${color1}${top name 2}${alignr}${top cpu 2}%
+${font Cantarell Bold:size=10,weight:normal}${color1}${top name 3}${alignr}${top cpu 3}%
+${font Cantarell Bold:size=10,weight:normal}${color1}${top name 4}${alignr}${top cpu 4}%
+${voffset 5}
+${font Cantarell Bold:size=9,weight:bold}${color3}Freq: ${font Cantarell Bold:size=9,weight:normal}${alignr}${freq} MHz
+${font Cantarell Bold:size=9,weight:bold}${color3}Temp: ${font Cantarell Bold:size=9,weight:normal}${alignr}${color3}${execi 8 sensors | grep -A 0 'id' |cut -c 18-24}
+${color4}${hr}
+# MEM
+${offset 35}${color2}${memgraph}${voffset -25}
+${font Cantarell Bold:size=10,weight:bold}${color5}MEM
+${color2}${membar}
+${font Cantarell Bold:size=10,weight:normal}${color1}${top_mem name 1}${alignr}${top_mem mem 1}%
+${font Cantarell Bold:size=10,weight:normal}${color1}${top_mem name 2}${alignr}${top_mem mem 2}%
+${font Cantarell Bold:size=10,weight:normal}${color1}${top_mem name 3}${alignr}${top_mem mem 3}%
+${font Cantarell Bold:size=10,weight:normal}${color1}${top_mem name 4}${alignr}${top_mem mem 4}%
+${color4}${hr}
+# HARD DISK
+${offset 50}${color2}${diskiograph}${voffset -25}
+${font Cantarell Bold:size=10,weight:bold}${color5}DISK
+${font Cantarell Bold:size=9,weight:bold}${color1}Sistema: ${alignr}${font Cantarell Bold:size=9,weight:normal}${alignr}${fs_used /}${alignr}/${fs_free /}
+${color2}${fs_bar /}
+${voffset 5}
+${font Cantarell Bold:size=9,weight:bold}${color3}Temp: ${font Cantarell Bold:size=9,weight:normal}${alignr}${color3}${execi 8 hddtemp /dev/sda | cut -c 35-40} $color
+${color4}${hr}
+# NET
+${font Cantarell Bold:size=10,weight:bold}${color5}WLAN
+${color1}${font Cantarell Bold:size=9,weight:bold}Up: ${alignr}${font Cantarell Bold:size=9,weight:normal}$color1${upspeed wlan0}
+${color2}${upspeedgraph wlan0}
+${color1}${font Cantarell Bold:size=9,weight:bold}Down: ${alignr}${font Cantarell Bold:size=9,weight:normal}$color1${downspeed wlan0}
+${color2}${downspeedgraph wlan0}
+${color4}${hr}
+${font Cantarell Bold:size=10,weight:bold}${color5}ETHERNET
+${color1}${font Cantarell Bold:size=9,weight:bold}Up: ${alignr}${font Cantarell Bold:size=9,weight:normal}$color1${upspeed eth0}
+${color2}${upspeedgraph eth0}
+${color1}${font Cantarell Bold:size=9,weight:bold}Down: ${alignr}${font Cantarell Bold:size=9,weight:normal}$color1${downspeed eth0}
+${color2}${downspeedgraph eth0}
+${color4}${hr 2}
