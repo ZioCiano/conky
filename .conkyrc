@@ -17,7 +17,7 @@ xftfont Cantarell Bold:size=10
 xftalpha 0.5
 uppercase no
 gap_x 10
-gap_y 70
+gap_y 10
 minimum_size 0 0
 maximum_width 300
 own_window yes
