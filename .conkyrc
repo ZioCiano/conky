@@ -48,7 +48,7 @@ ${color4}${hr 2}
 ${font Cantarell Bold:size=10,weight:bold}${color5}SISTEM
 ${font Cantarell Bold:size=10,weight:normal}${color1}$sysname $kernel
 ${font Cantarell Bold:size=10,weight:normal}${color1}$nodename
-${font Cantarell Bold:size=10,weight:normal}${color1}$hostname
+${font Cantarell Bold:size=10,weight:normal}${color1}$uptime
 # CPU
 ${offset 35}${color2}${cpugraph}${voffset -25}
 ${font Cantarell Bold:size=10,weight:bold}${color5}CPU
@@ -73,7 +73,7 @@ ${color4}${hr}
 # HARD DISK
 ${offset 50}${color2}${diskiograph}${voffset -25}
 ${font Cantarell Bold:size=10,weight:bold}${color5}DISK
-${font Cantarell Bold:size=9,weight:bold}${color1}Sistema: ${alignr}${font Cantarell Bold:size=9,weight:normal}${alignr}${fs_used /}${alignr}/${fs_free /}
+${font Cantarell Bold:size=9,weight:bold}${color1}Used: ${font Cantarell Bold:size=9,weight:normal}${fs_used /}${alignr}${font Cantarell Bold:size=9,weight:bold}Free: ${font Cantarell Bold:size=9,weight:normal}${fs_free /}
 ${color2}${fs_bar /}
 ${voffset 5}
 ${font Cantarell Bold:size=9,weight:bold}${color3}Temp: ${font Cantarell Bold:size=9,weight:normal}${alignr}${color3}${execi 8 hddtemp /dev/sda | cut -c 35-40} $color
