@@ -1,0 +1,66 @@
+#Essential-conky
+#Author: ZioCiano (Luciano Ognissanti)
+#Version: 1.0
+#
+#===========#
+background yes
+update_interval 1
+cpu_avg_samples 1
+net_avg_samples 2
+temperature_unit celsius
+double_buffer yes
+no_buffers yes
+text_buffer_size 2048
+override_utf8_locale yes
+use_xft yes
+xftfont Cantarell Bold:size=8
+xftalpha 0.5
+uppercase no
+gap_x 10
+gap_y 200
+minimum_size 0 0
+maximum_width 300
+own_window yes
+own_window_type normal
+own_window_transparent yes
+own_window_argb_visual yes
+own_window_argb_visual yes
+own_window_colour 000000
+own_window_argb_value 0
+own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
+border_inner_margin 0
+border_outer_margin 0
+alignment bottom_right
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+# Defining colors
+color1 FFFFFF #Bianco
+color2 B2B2B2 #Grigio 30%
+color3 0047AB #Ceruleo
+## System information using conky capabilities
+TEXT
+# CPU
+${font Cantarell Bold:size=9,weight:bold}${color1}CPU
+${font Cantarell Bold:size=8,weight:bold}${color2}CPU: ${alignr}${font Cantarell Bold:size=8,weight:normal}${cpu cpu0}%
+${color2}${cpugraph cpu0}
+${color3}${hr}
+# RAM
+${font Cantarell Bold:size=9,weight:bold}${color1}RAM
+${font Cantarell Bold:size=8,weight:normal}${color2}${top_mem name 1}${alignr}${top_mem mem 1}%
+${font Cantarell Bold:size=8,weight:normal}${color2}${top_mem name 2}${alignr}${top_mem mem 2}%
+${font Cantarell Bold:size=8,weight:normal}${color2}${top_mem name 3}${alignr}${top_mem mem 3}%
+${font Cantarell Bold:size=8,weight:normal}${color2}${top_mem name 4}${alignr}${top_mem mem 4}%
+${color2}${memgraph}
+${color3}${hr}
+# INTERNET
+${font Cantarell Bold:size=9,weight:bold}${color1}NET
+${color2}${font Cantarell Bold:size=8,weight:bold}IP Esterno:${font Cantarell Bold:size=8,weight:normal}${alignr}${execi 1000 wget -O - http://ip.tupeux.com | tail}
+${color2}${font Cantarell Bold:size=8,weight:bold}IP Wi-fi:${color2}${font Cantarell Bold:size=8,weight:normal}${alignr}${addr wlan0}
+${color2}${font Cantarell Bold:size=8,weight:bold}Up: ${alignr}${font Cantarell Bold:size=8,weight:normal}${color2}${upspeed wlan0}
+${color2}${upspeedgraph wlan0}
+${color2}${font Cantarell Bold:size=8,weight:bold}Down: ${alignr}${font Cantarell Bold:size=8,weight:normal}${color2}${downspeed wlan0}
+${color2}${downspeedgraph wlan0}
+${color3}${hr}
+${color1}${font Cantarell Bold:size=7,weight:bold}${alignr}Up: ${uptime}
