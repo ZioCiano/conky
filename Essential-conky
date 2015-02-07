@@ -58,9 +58,9 @@ ${color3}${hr}
 ${font Cantarell Bold:size=9,weight:bold}${color1}NET
 ${color2}${font Cantarell Bold:size=8,weight:bold}IP Esterno:${font Cantarell Bold:size=8,weight:normal}${alignr}${execi 1000 wget -O - http://ip.tupeux.com | tail}
 ${color2}${font Cantarell Bold:size=8,weight:bold}IP Wi-fi:${color2}${font Cantarell Bold:size=8,weight:normal}${alignr}${addr wlan0}
-${color2}${font Cantarell Bold:size=8,weight:bold}Up: ${alignr}${font Cantarell Bold:size=8,weight:normal}${color2}${upspeed wlan0}
+${color2}${font Cantarell Bold:size=8,weight:bold}Up: ${font Cantarell Bold:size=8,weight:normal}${color2}${alignr}${upspeed wlan0}
 ${color2}${upspeedgraph wlan0}
-${color2}${font Cantarell Bold:size=8,weight:bold}Down: ${alignr}${font Cantarell Bold:size=8,weight:normal}${color2}${downspeed wlan0}
+${color2}${font Cantarell Bold:size=8,weight:bold}Down: ${font Cantarell Bold:size=8,weight:normal}${color2}${alignr}${downspeed wlan0}
 ${color2}${downspeedgraph wlan0}
 ${color3}${hr}
 ${color1}${font Cantarell Bold:size=7,weight:bold}${alignr}Up: ${uptime}
