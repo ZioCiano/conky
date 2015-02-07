@@ -80,14 +80,14 @@ ${font Cantarell Bold:size=8,weight:bold}${color3}Temperatura: ${font Cantarell 
 ${color4}${hr}
 # INTERNET
 ${font Cantarell Bold:size=8,weight:bold}${color5}NET
-${color1}${font Cantarell Bold:size=8,weight:bold}Eth-up: ${alignr}${font Cantarell Bold:size=8,weight:normal}$color1${upspeed eth0}
-${color2}${upspeedgraph eth0}
-${color1}${font Cantarell Bold:size=8,weight:bold}Eth-down: ${alignr}${font Cantarell Bold:size=8,weight:normal}$color1${downspeed eth0}
-${color2}${downspeedgraph eth0}
-${color1}${font Cantarell Bold:size=8,weight:bold}Wlan-up: ${alignr}${font Cantarell Bold:size=8,weight:normal}$color1${upspeed wlan0}
-${color2}${upspeedgraph wlan0}
-${color1}${font Cantarell Bold:size=8,weight:bold}Wlan-down: ${alignr}${font Cantarell Bold:size=8,weight:normal}$color1${downspeed wlan0}
-${color2}${downspeedgraph wlan0}
+${color1}${font Cantarell Bold:size=8,weight:bold}Eth-up: ${font Cantarell Bold:size=8,weight:normal}$color1${upspeed eth0}
+${color2}${alignr}${upspeedgraph eth0}
+${color1}${font Cantarell Bold:size=8,weight:bold}Eth-down: ${font Cantarell Bold:size=8,weight:normal}$color1${downspeed eth0}
+${color2}${alignr}${downspeedgraph eth0}
+${color1}${font Cantarell Bold:size=8,weight:bold}Wlan-up: ${font Cantarell Bold:size=8,weight:normal}$color1${upspeed wlan0}
+${color2}${alignr}${upspeedgraph wlan0}
+${color1}${font Cantarell Bold:size=8,weight:bold}Wlan-down: ${font Cantarell Bold:size=8,weight:normal}$color1${downspeed wlan0}
+${color2}${alignr}${downspeedgraph wlan0}
 ${color3}${font Cantarell Bold:size=8,weight:bold}IP Esterno:${font Cantarell Bold:size=8,weight:normal}${alignr}${execi 1000 wget -O - http://ip.tupeux.com | tail}
 ${color3}${font Cantarell Bold:size=8,weight:bold}IP Wi-fi:${color3}${font Cantarell Bold:size=8,weight:normal}${alignr}${addr wlan0}
 ${color4}${hr 2}
