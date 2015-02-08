@@ -1,6 +1,5 @@
-#Essential-conky
 #Author: ZioCiano (Luciano Ognissanti)
-#Version: 1.0
+#Version: 1.1
 #
 #===========#
 background yes
@@ -19,7 +18,7 @@ uppercase no
 gap_x 10
 gap_y 200
 minimum_size 0 0
-maximum_width 300
+maximum_width 250
 own_window yes
 own_window_type normal
 own_window_transparent yes
@@ -42,9 +41,11 @@ color3 0047AB #Ceruleo
 ## System information using conky capabilities
 TEXT
 # CPU
+${offset 35}${color2}${cpugraph cpu0 0047AB 0047AB}${voffset -20}
 ${font Cantarell Bold:size=9,weight:bold}${color1}CPU
 ${font Cantarell Bold:size=8,weight:bold}${color2}CPU: ${alignr}${font Cantarell Bold:size=8,weight:normal}${cpu cpu0}%
-${color2}${cpugraph cpu0}
+${font Cantarell Bold:size=8,weight:bold}${color2}Frequenza: ${font Cantarell Bold:size=8,weight:normal}${alignr}${freq} MHz
+${font Cantarell Bold:size=8,weight:bold}${color2}Temperatura: ${font Cantarell Bold:size=8,weight:normal}${alignr}${color2}${execi 8 sensors | grep -A 0 'id' |cut -c 18-24}
 ${color3}${hr}
 # RAM
 ${font Cantarell Bold:size=9,weight:bold}${color1}RAM
@@ -52,15 +53,22 @@ ${font Cantarell Bold:size=8,weight:normal}${color2}${top_mem name 1}${alignr}${
 ${font Cantarell Bold:size=8,weight:normal}${color2}${top_mem name 2}${alignr}${top_mem mem 2}%
 ${font Cantarell Bold:size=8,weight:normal}${color2}${top_mem name 3}${alignr}${top_mem mem 3}%
 ${font Cantarell Bold:size=8,weight:normal}${color2}${top_mem name 4}${alignr}${top_mem mem 4}%
-${color2}${memgraph}
+${color3}${membar}
+${color3}${hr}
+# HARD DISK
+${offset 45}${color2}${diskiograph 0047AB 0047AB}${voffset -20}
+${font Cantarell Bold:size=9,weight:bold}${color1}DISCO
+${font Cantarell Bold:size=8,weight:bold}${color2}Sistema: ${font Cantarell Bold:size=8,weight:normal}${alignr}${fs_used /}${alignr}/${fs_free /}
+${font Cantarell Bold:size=8,weight:bold}${color2}Dati: ${font Cantarell Bold:size=8,weight:normal}${alignr}${fs_used /media/sirio/Dati}${alignr}/${fs_free /media/sirio/Dati}
+${font Cantarell Bold:size=8,weight:bold}${color2}Temperatura: ${font Cantarell Bold:size=8,weight:normal}${alignr}${color2}${execi 8 hddtemp /dev/sda | cut -c 35-40}
 ${color3}${hr}
 # INTERNET
 ${font Cantarell Bold:size=9,weight:bold}${color1}NET
 ${color2}${font Cantarell Bold:size=8,weight:bold}IP Esterno:${font Cantarell Bold:size=8,weight:normal}${alignr}${execi 1000 wget -O - http://ip.tupeux.com | tail}
 ${color2}${font Cantarell Bold:size=8,weight:bold}IP Wi-fi:${color2}${font Cantarell Bold:size=8,weight:normal}${alignr}${addr wlan0}
+${upspeedgraph wlan0 0047AB 0047AB}${voffset -20}
 ${color2}${font Cantarell Bold:size=8,weight:bold}Up: ${font Cantarell Bold:size=8,weight:normal}${color2}${alignr}${upspeed wlan0}
-${color2}${upspeedgraph wlan0}
+${downspeedgraph wlan0 0047AB 0047AB}${voffset -20}
 ${color2}${font Cantarell Bold:size=8,weight:bold}Down: ${font Cantarell Bold:size=8,weight:normal}${color2}${alignr}${downspeed wlan0}
-${color2}${downspeedgraph wlan0}
 ${color3}${hr}
 ${color1}${font Cantarell Bold:size=7,weight:bold}${alignr}Up: ${uptime}
