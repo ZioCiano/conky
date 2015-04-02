@@ -53,7 +53,8 @@ ${font Cantarell Bold:size=8,weight:normal}${color2}${top_mem name 1}${alignr}${
 ${font Cantarell Bold:size=8,weight:normal}${color2}${top_mem name 2}${alignr}${top_mem mem 2}%
 ${font Cantarell Bold:size=8,weight:normal}${color2}${top_mem name 3}${alignr}${top_mem mem 3}%
 ${font Cantarell Bold:size=8,weight:normal}${color2}${top_mem name 4}${alignr}${top_mem mem 4}%
-${color3}${membar}
+${font Cantarell Bold:size=8,weight:bold}${color2}Consumo:${font Cantarell Bold:size=8,weight:normal}${color2}${alignr}${memperc}%
+${font Cantarell Bold:size=8,weight:bold}${color2}Utilizzo:${font Cantarell Bold:size=8,weight:normal}${color2}${alignr}${mem}/${alignr}${memmax}
 ${color3}${hr}
 # HARD DISK
 ${offset 45}${color2}${diskiograph 0047AB 0047AB}${voffset -20}
