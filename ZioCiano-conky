@@ -71,9 +71,9 @@ ${color4}${hr}
 # HARD DISK
 ${offset 45}${color2}${diskiograph}${voffset -20}
 ${font Cantarell Bold:size=8,weight:bold}${color5}DISCO
-${font Cantarell Bold:size=8,weight:bold}${color1}Sistema: ${alignr}${font Cantarell Bold:size=8,weight:normal}${alignr}${fs_used /}${alignr}/${fs_free /}
+${font Cantarell Bold:size=8,weight:bold}${color1}Sistema: ${alignr}${font Cantarell Bold:size=8,weight:normal}${alignr}${fs_used /}${alignr}/${fs_size /}
 ${color2}${fs_bar /}
-${font Cantarell Bold:size=8,weight:bold}${color1}Dati: ${alignr}${font Cantarell Bold:size=8,weight:normal}${alignr}${fs_used /media/sirio/Dati}${alignr}/${fs_free /media/sirio/Dati}
+${font Cantarell Bold:size=8,weight:bold}${color1}Dati: ${alignr}${font Cantarell Bold:size=8,weight:normal}${alignr}${fs_used /media/sirio/Dati}${alignr}/${fs_size /media/sirio/Dati}
 ${color2}${fs_bar /media/sirio/Dati}
 ${voffset 5}
 ${font Cantarell Bold:size=8,weight:bold}${color3}Temperatura: ${font Cantarell Bold:size=8,weight:normal}${alignr}${color3}${execi 8 hddtemp /dev/sda | cut -c 35-40}
