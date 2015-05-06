@@ -60,8 +60,8 @@ ${color3}${hr}
 ${offset 45}${color2}${diskiograph 0047AB 0047AB}${voffset -20}
 ${font Cantarell Bold:size=9,weight:bold}${color1}DISCO
 ${font Cantarell Bold:size=8,weight:bold}${color2}Temperatura: ${font Cantarell Bold:size=8,weight:normal}${alignr}${color2}${execi 8 hddtemp /dev/sda | cut -c 36-40}
-${font Cantarell Bold:size=8,weight:bold}${color2}Sistema: ${font Cantarell Bold:size=8,weight:normal}${alignr}${fs_used /}${alignr}/${fs_free /}
-${font Cantarell Bold:size=8,weight:bold}${color2}Dati: ${font Cantarell Bold:size=8,weight:normal}${alignr}${fs_used /media/sirio/Dati}${alignr}/${fs_free /media/sirio/Dati}
+${font Cantarell Bold:size=8,weight:bold}${color2}Sistema: ${font Cantarell Bold:size=8,weight:normal}${alignr}${fs_used /}${alignr}/${fs_size /}
+${font Cantarell Bold:size=8,weight:bold}${color2}Dati: ${font Cantarell Bold:size=8,weight:normal}${alignr}${fs_used /media/sirio/Dati}${alignr}/${fs_size /media/sirio/Dati}
 ${color3}${hr}
 # INTERNET
 ${font Cantarell Bold:size=9,weight:bold}${color1}NET
