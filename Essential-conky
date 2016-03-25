@@ -45,7 +45,7 @@ ${offset 35}${color2}${cpugraph cpu0 0047AB 0047AB}${voffset -20}
 ${font Cantarell Bold:size=9,weight:bold}${color1}CPU
 ${font Cantarell Bold:size=8,weight:bold}${color2}CPU: ${alignr}${font Cantarell Bold:size=8,weight:normal}${cpu cpu0}%
 ${font Cantarell Bold:size=8,weight:bold}${color2}Frequenza: ${font Cantarell Bold:size=8,weight:normal}${alignr}${freq} MHz
-${font Cantarell Bold:size=8,weight:bold}${color2}Temperatura: ${font Cantarell Bold:size=8,weight:normal}${alignr}${color2}${execi 8 sensors | grep -A 0 'id' |cut -c 18-24}
+${font Cantarell Bold:size=8,weight:bold}${color2}Temperatura: ${font Cantarell Bold:size=8,weight:normal}${alignr}${color2}${execi 8 sensors | grep -A 0 'id' |cut -c 18-23}
 ${color3}${hr}
 # RAM
 ${font Cantarell Bold:size=9,weight:bold}${color1}RAM
@@ -59,7 +59,7 @@ ${color3}${hr}
 # HARD DISK
 ${offset 45}${color2}${diskiograph 0047AB 0047AB}${voffset -20}
 ${font Cantarell Bold:size=9,weight:bold}${color1}DISCO
-${font Cantarell Bold:size=8,weight:bold}${color2}Temperatura: ${font Cantarell Bold:size=8,weight:normal}${alignr}${color2}${execi 8 hddtemp /dev/sda | cut -c 36-40}
+${font Cantarell Bold:size=8,weight:bold}${color2}Temperatura: ${font Cantarell Bold:size=8,weight:normal}${alignr}${color2}${execi 8 hddtemp /dev/sda | cut -c 34-38}
 ${font Cantarell Bold:size=8,weight:bold}${color2}Sistema: ${font Cantarell Bold:size=8,weight:normal}${alignr}${fs_used /}${alignr}/${fs_size /}
 ${font Cantarell Bold:size=8,weight:bold}${color2}Dati: ${font Cantarell Bold:size=8,weight:normal}${alignr}${fs_used /media/sirio/Dati}${alignr}/${fs_size /media/sirio/Dati}
 ${color3}${hr}
